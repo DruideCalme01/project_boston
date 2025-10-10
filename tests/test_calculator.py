@@ -1,4 +1,4 @@
-from src.calculator import add, subtract # Import the functions to be tested in src/calculator.py 
+from mon_projet.calculator import add, subtract # Import the functions to be tested in src/calculator.py 
 
 def test_add():
     assert add(2, 3) == 5
