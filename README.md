@@ -15,7 +15,7 @@ L'objectif est d'extraire des données publiques, de les transformer pour les re
 
 ---
 
-## Tâches à réaliser par l'Équipe
+## 🧩 Tâches à réaliser par l'Équipe
 
 
 ## 🤝 Organisation de l'Équipe (Méthode Scrum)
