@@ -17,6 +17,11 @@ L'objectif est d'extraire des données publiques, de les transformer pour les re
 
 ## 🧩 Tâches à réaliser par l'Équipe
 
+**Tâches :**
+- 
+
+**Lien vers les tâches :** https://github.com/DruideCalme01/project_boston/issues
+
 
 ## 🤝 Organisation de l'Équipe (Méthode Scrum)
 
@@ -54,4 +59,4 @@ Les rituels sont le cœur de la collaboration de l'équipe et permettent l'inspe
 
 ## 📦 Backlog Produit
 
-**Lien vers l'outil de Backlog :** https://github.com/users/DruideCalme01/projects/3
+**Lien vers le Backlog :** https://github.com/users/DruideCalme01/projects/3
