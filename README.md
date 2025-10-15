@@ -9,7 +9,7 @@ Ce document sert de référence principale pour l'organisation, les objectifs et
 ### Vision du Produit
 **Avoir un pipeline ETL automatisé, testé et réutilisable pour analyser les données publiques de la ville de Boston.**
 
-### Objectif Principal (La *Product Goal*)
+### Objectif Principal (Le *Product Goal*)
 Mettre en œuvre un pipeline ETL (Extract, Transform, Load) complet pour analyser les écarts de salaires des employés municipaux de la ville de Boston sur l'année 2018.
 L'objectif est d'extraire des données publiques, de les transformer pour les rendre exploitables, puis de calculer des statistiques par département (écarts de salaire, médiane, min, max, etc.).
 
