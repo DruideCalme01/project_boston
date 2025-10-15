@@ -10,6 +10,7 @@ def transform(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Le DataFrame transformé avec les types de données corrigés.
     """
+    print("🧹 Début du nettoyage des données...")
     #Faire une copie 
     df_transformed = df.copy()
     
