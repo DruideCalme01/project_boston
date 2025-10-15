@@ -18,10 +18,16 @@ L'objectif est d'extraire des données publiques, de les transformer pour les re
 ## 🧩 Tâches à réaliser par l'Équipe
 
 **Tâches :**
-- 
+- Réaliser une extraction de données depuis une API
+- Transformer les données extraites de façon claires et lisibles
+- Enregistrer les données transformées dans un fichier final type CSV
+- Réaliser des tests unitaires pour vérifier que les codes marchent de façon correctes
+- Effectuer une analyse des données pour récupérer les données importantes
+- Automatiser le pipeline ETL grâce à une automatisation CI/CD
 
 **Lien vers les tâches :** https://github.com/DruideCalme01/project_boston/issues
 
+---
 
 ## 🤝 Organisation de l'Équipe (Méthode Scrum)
 
