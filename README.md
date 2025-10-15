@@ -15,6 +15,9 @@ L'objectif est d'extraire des données publiques, de les transformer pour les re
 
 ---
 
+## Tâches à réaliser par l'Équipe
+
+
 ## 🤝 Organisation de l'Équipe (Méthode Scrum)
 
 L'équipe opère selon le cadre de travail **Scrum** pour garantir une livraison de valeur progressive et adaptative.
