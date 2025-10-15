@@ -1,7 +1,8 @@
 import pandas as pd
 import requests
+from urllib.parse import urlparse, parse_qs
 
-def extract_boston_salary(url: str):
+def extract_boston_salary(url: str) -> pd.DataFrame:
     """
     Extrait l'ensemble des données sur les salaires depuis l'API Boston en gérant la pagination.
 
@@ -11,23 +12,33 @@ def extract_boston_salary(url: str):
     Returns:
         Un DataFrame pandas contenant toutes les données de salaires.
     """
-    # Liste pour stocker les enregistrements de toutes les pages
     all_records = []
-    
+
+    parsed_url = urlparse(url)
+    query_params = parse_qs(parsed_url.query)
+    resource_id = query_params.get('resource_id', [None])[0] 
+
+    base_url = "https://data.boston.gov/api/3/action/datastore_search"
+
     # Paramètres pour la pagination
     offset = 0
-    # On met une limite plus élevée pour réduire le nombre d'appels à l'API
-    limit = 5000
+    try:
+        limit = int(query_params.get('limit', [5000])[0])
+    except (ValueError, IndexError):
+        limit = 5000 # Valeur par défaut si non spécifié ou invalide
 
     while True:
+        params = {
+            'resource_id': resource_id,
+            'offset': offset,
+            'limit': limit
+        }
         print(f"Récupération des données... (offset={offset})")
 
         try:
-            # Construction de l'URL avec les paramètres de pagination
-            paginated_url = f"{url}&limit={limit}&offset={offset}"
 
             # Fait la requête à l'API
-            response = requests.get(paginated_url)
+            response = requests.get(base_url, params=params)
             response.raise_for_status()
 
             data = response.json()
