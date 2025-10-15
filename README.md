@@ -20,11 +20,11 @@ L'équipe opère selon le cadre de travail **Scrum** pour garantir une livraison
 
 ### Rôles Clés
 
-| Rôle | Responsabilité Principale | Orientation |
-| :--- | :--- | :--- |
-| **Product Owner (PO)**  William BAAL| Maximiser la valeur du produit. Gère et ordonne le Backlog Produit, est l'interface avec les parties prenantes et valide le travail réalisé. | **Le "QUOI"** |
-| **Scrum Master (SM)** Benjamin CHASSIER| Assurer la bonne application d'AGILE/Scrum. Facilite les rituels, élimine les obstacles (*impediments*) et protège l'équipe des interférences. | **Le "COMMENT nous nous organisons"** |
-| **Équipe de Développement**  William BAAL Benjamin CHASSIER Matthieu NOGUEIRA Ryan BONZANINI Philippe GONCALVES| Produire l'incrément de valeur à chaque Sprint. Responsable de l'estimation, de la conception, de l'implémentation, des tests et du déploiement. | **Les Data Engineers** |
+| Rôle | Responsabilité Principale | Orientation | Personnes |
+| :--- | :--- | :--- | :--- |
+| **Product Owner (PO)** | Maximiser la valeur du produit. Gère et ordonne le Backlog Produit, est l'interface avec les parties prenantes et valide le travail réalisé. | **Le "QUOI"** | William BAAL |
+| **Scrum Master (SM)** | Assurer la bonne application d'AGILE/Scrum. Facilite les rituels, élimine les obstacles (*impediments*) et protège l'équipe des interférences. | **Le "COMMENT nous nous organisons"** | Benjamin CHASSIER |
+| **Équipe de Développement** | Produire l'incrément de valeur à chaque Sprint. Responsable de l'estimation, de la conception, de l'implémentation, des tests et du déploiement. | **Les Data Engineers** | William BAAL Benjamin CHASSIER Matthieu NOGUEIRA Ryan BONZANINI Philippe GONCALVES |
 
 ---
 
