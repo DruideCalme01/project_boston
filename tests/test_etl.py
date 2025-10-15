@@ -2,6 +2,7 @@ import pandas as pd
 import pytest  # pytest est utilisé implicitement mais l'importer est une bonne pratique
 from mon_projet.utils.extract import extract_boston_salary 
 from mon_projet.utils.transform import transform
+from mon_projet.utils.analyse import analyse
 
 # URL de l'API (peut être utilisée pour un test d'intégration léger)
 URL = "https://data.boston.gov/api/3/action/datastore_search?resource_id=31358fd1-849a-48e0-8285-e813f6efbdf1"
@@ -45,27 +46,30 @@ def test_transform_converts_total_earnings():
     assert transformed_df['TOTAL EARNINGS'][0] == 123456.78
     assert transformed_df['TOTAL EARNINGS'][2] == 0
 
-# # --- Test pour la fonction d'analyse (Analyse) ---
-# # Supposons que votre fonction `analyse` retourne un dictionnaire avec des indicateurs
-# def test_analyse_returns_dict():
-#     """
-#     Vérifie que la fonction d'analyse retourne bien un dictionnaire
-#     et que les clés attendues sont présentes.
-#     """
-#     # Arrange : On crée un DataFrame déjà nettoyé pour l'analyse
-#     clean_data = {
-#         'TOTAL EARNINGS': [100000.0, 50000.0, 150000.0],
-#         'DEPARTMENT_NAME': ['Police', 'Fire', 'Police']
-#     }
-#     clean_df = pd.DataFrame(clean_data)
+# --- Test pour la fonction d'analyse (Analyse) ---
+
+# Dans test_etl.py, vous pourriez ajouter cette vérification :
+def test_analyse_returns_dict():
     
-#     # Act : On appelle la fonction d'analyse
-#     analysis_results = analyse(clean_df) # `analyse` doit être définie dans etl.py
+    """
+    Vérifie que la fonction analyse renvoie un dictionnaire avec les statistiques attendues.
+    """ 
+    # Arrange : On crée un DataFrame de test avec des données nettoyées
+    cleaned_data = {
+        'TOTAL EARNINGS': [120000.0, 80000.0, 100000.0],
+        'DEPARTMENT_NAME': ['Dept A', 'Dept B', 'Dept A']
+    }
+
+    cleaned_df = pd.DataFrame(cleaned_data)
     
-#     # Assert : On vérifie le type de retour et la structure
-#     assert isinstance(analysis_results, dict)
-#     assert 'salaire_moyen_total' in analysis_results
-#     assert 'salaire_max' in analysis_results
-    
-#     # On peut même vérifier le calcul
-#     assert analysis_results['salaire_moyen_total'] == 100000.0
+    analysis_results = analyse(cleaned_df)
+    assert isinstance(analysis_results, dict)
+    assert 'statistiques_globales' in analysis_results
+    assert 'statistiques_par_departement' in analysis_results 
+    assert 'Dept A' in analysis_results['statistiques_par_departement']
+    assert 'Dept B' in analysis_results['statistiques_par_departement']
+    assert analysis_results['statistiques_par_departement']['Dept A']['count'] == 2
+    assert analysis_results['statistiques_par_departement']['Dept B']['count'] == 1
+    assert analysis_results['statistiques_globales']['mean'] == 100000.0
+    assert analysis_results['statistiques_globales']['min'] == 80000.0
+    assert analysis_results['statistiques_globales']['max'] == 120000.0
