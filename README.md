@@ -59,7 +59,7 @@ Les rituels sont le cœur de la collaboration de l'équipe et permettent l'inspe
 
 ## 💻 Tech Stack & Dépendances
 
-*(Cette section est à compléter avec les outils concrets : Python, Airflow/Prefect, Docker, AWS/GCP/Azure, PostgreSQL/Snowflake, etc.)*
+Python, Pandas, Github, VS Code
 
 ---
 
