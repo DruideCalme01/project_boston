@@ -50,6 +50,4 @@ Les rituels sont le cœur de la collaboration de l'équipe et permettent l'inspe
 
 ## 📦 Backlog Produit
 
-*(Le Backlog Produit détaillé (User Stories) doit être géré dans l'outil de gestion de projet (Jira, Trello, Azure DevOps) et est ordonné par le PO.)*
-
-**Lien vers l'outil de Backlog :** [À insérer ici]
+**Lien vers l'outil de Backlog :** https://github.com/users/DruideCalme01/projects/3
